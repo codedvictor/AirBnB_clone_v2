@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-
+"""a Fabric script (based on the file 1-pack_web_static.py) that distributes
+an archive to your web servers, using the function do_deploy"""
 from fabric.api import *
 import os
 from datetime import datetime
@@ -7,7 +8,7 @@ import shlex
 
 
 env.user = "ubuntu"
-env.hosts = ['54.162.106.171', '54.90.38.102']
+env.hosts = ['54.144.249.223', '54.87.212.214']
 
 
 def do_deploy(archive_path):
