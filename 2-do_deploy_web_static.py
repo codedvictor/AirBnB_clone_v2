@@ -17,9 +17,9 @@ def do_deploy(archive_path):
     if not os.path.exists(archive_path):
         return False
     try:
-        paths = archive_path.replace('/', ' ')
-        paths = shlex.split(paths)
-        file_name = paths[-1]
+        file_path = archive_path.replace('/', ' ')
+        file_path = shlex.split(file_path)
+        file_name = file_path[-1]
 
         file_ext = file_name.replace('.', ' ')
         file_ext = shlex.split(file_ext)

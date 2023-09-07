@@ -13,8 +13,8 @@ def do_pack():
         if not os.path.exists('versions'):
             local('mkdir versions')
         date = datetime.now()
-        fmt = "%Y%m%d%H%M%S"
-        path = 'versions/web_static_{}.tgz'.format(date.strftime(fmt))
+        date_format = "%Y%m%d%H%M%S"
+        path = 'versions/web_static_{}.tgz'.format(date.strftime(date_format))
         local('tar -cvzf {} web_static'.format(path))
         return path
     except Exception:
