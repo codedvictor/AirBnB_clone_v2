@@ -15,8 +15,8 @@ def do_pack():
     """Generates a .tgz archive from the conten of web_static"""
 
     now_date = datetime.now()
-    date_format = "%Y%m%d%H%M%S"
-    c_file = 'versions/web_static_{}.tgz'.format(now_date.strftime(date_format))
+    date_fmt = "%Y%m%d%H%M%S"
+    c_file = 'versions/web_static_{}.tgz'.format(now_date.strftime(date_fmt))
 
     try:
         if not os.path.isdir("versions"):
